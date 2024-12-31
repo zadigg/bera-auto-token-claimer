@@ -10,7 +10,6 @@ This repository contains a Python script and a GitHub Actions workflow to automa
 - Automatically claims tokens using the faucet API.
 - Fetches wallet address securely from an environment variable.
 - Configured to run every 8 hours using GitHub Actions.
-- Logs all responses (success or errors) to a file for easy tracking.
 
 ---
 
@@ -58,11 +57,6 @@ To test the workflow manually:
 1. Go to the **Actions** tab in your repository.
 2. Select the workflow (e.g., "Run Drip Script").
 3. Click **Run workflow**.
-
----
-
-### 5. View Logs
-Logs for each workflow run can be found in the **Actions** tab on GitHub. You can also view detailed responses in the `claim_log.txt` file, which is updated every time the script runs.
 
 ---
 
