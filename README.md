@@ -52,6 +52,11 @@ on:
 ```
 Refer to [crontab.guru](https://crontab.guru/) for help with cron expressions.
 
+Evry 8 hours you see new workflow in the action tab 
+
+![image](https://github.com/user-attachments/assets/ed1642c4-cc93-4377-984e-f2132bf1446f)
+
+
 ---
 
 ### 4. Run Manually (Optional)
