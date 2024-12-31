@@ -57,17 +57,6 @@ To test the workflow manually:
 
 ---
 
-## Requirements
-
-- Python 3.8 or higher (for local testing).
-- Dependencies: Install via:
-  ```bash
-  pip install requests
-  ```
-- A GitHub account to use GitHub Actions.
-
----
-
 ## License
 
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
