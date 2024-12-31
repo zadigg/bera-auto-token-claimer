@@ -16,10 +16,7 @@ This repository contains a Python script and a GitHub Actions workflow to automa
 ## Setup Instructions
 
 ### 1. Fork or Clone This Repository
-You can fork this repository to your own GitHub account or clone it locally:
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-```
+Fork this repository to your own
 
 ---
 
