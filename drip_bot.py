@@ -1,12 +1,16 @@
+import os
 import requests
 from datetime import datetime
 
-
 url = "https://bartiofaucet.berachain.com/api/claim"
-payload = {
-    "address": "0x3262902343C16C54Be3C33e6F7b9FDE5C5FD39eD"  # Replace with your Ethereum wallet address
-}
 
+wallet_address = os.getenv("WALLET_ADDRESS")
+
+
+if not wallet_address:
+    raise ValueError("WALLET_ADDRESS environment variable is not set")
+
+payload = {"address": wallet_address}
 
 log_file = "claim_log.txt"
 
@@ -31,6 +35,7 @@ try:
         message = f"Error: Received status code {response.status_code}"
         print(message)
         print("Response:", response.text)
+        log_to_file(message)
         log_to_file(f"{response.status_code}: {response.text}")
 
 except Exception as e:

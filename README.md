@@ -8,6 +8,7 @@ This repository contains a Python script and a GitHub Actions workflow to automa
 ## Features
 
 - Automatically claims tokens using the faucet API.
+- Fetches wallet address securely from an environment variable.
 - Configured to run every 8 hours using GitHub Actions.
 - Logs all responses (success or errors) to a file for easy tracking.
 
@@ -23,26 +24,22 @@ git clone https://github.com/your-username/your-repo-name.git
 
 ---
 
-### 2. Update the Wallet Address
-1. Open the `drip_script.py` file.
-2. Replace the placeholder wallet address with your Ethereum wallet address:
-   ```python
-   payload = {
-       "address": "0xYourEthereumWalletAddress"  # Replace with your actual wallet address
-   }
-   ```
-3. Commit your changes:
-   ```bash
-   git add drip_script.py
-   git commit -m "Update wallet address"
-   git push origin main
-   ```
+### 2. Set Up the Wallet Address
+The script fetches the wallet address from an environment variable called `WALLET_ADDRESS`. Follow these steps to set it up securely:
+
+1. Navigate to your GitHub repository.
+2. Go to **Settings** > **Secrets and variables** > **Actions** > **New repository secret**.
+3. Add a new secret:
+   - **Name**: `WALLET_ADDRESS`
+   - **Value**: `0xYourEthereumWalletAddress` (replace with your actual wallet address).
+4. Save the secret.
 
 ---
 
 ### 3. GitHub Actions Workflow
 The repository includes a pre-configured GitHub Actions workflow located at `.github/workflows/run_script.yml`. The workflow:
 - Runs the script every 8 hours.
+- Passes the wallet address securely to the script using GitHub Secrets.
 - Automatically installs Python and dependencies.
 
 #### Modifying the Schedule
