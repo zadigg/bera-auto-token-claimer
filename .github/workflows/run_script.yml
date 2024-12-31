@@ -2,7 +2,8 @@ name: Run Drip Script
 
 on:
   schedule:
-    - cron: "0 */8 * * *"
+    - cron: "0 */8 * * *"  # Runs every 8 hours
+  workflow_dispatch:
 
 jobs:
   run-script:
