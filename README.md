@@ -15,6 +15,11 @@ This repository contains a Python script and a GitHub Actions workflow to automa
 
 ## Setup Instructions
 
+### **Important**
+To successfully run this script, you must complete **Step 1** (Fork the repository) and **Step 2** (Set up the wallet address).
+
+---
+
 ### 1. Fork or Clone This Repository
 Fork this repository to your own
 
@@ -32,7 +37,7 @@ The script fetches the wallet address from an environment variable called `WALLE
 
 ---
 
-### 3. GitHub Actions Workflow
+### 3. GitHub Actions Workflow  
 The repository includes a pre-configured GitHub Actions workflow located at `.github/workflows/run_script.yml`. The workflow:
 - Runs the script every 8 hours.
 - Passes the wallet address securely to the script using GitHub Secrets.
